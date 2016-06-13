@@ -26,10 +26,11 @@
     "cli-table": "^0.3.1",
     "js-yaml": "^3.5.3",
     "loglevel": "^1.4.0",
-    "moment": "^2.11.2",
+    "moment": "^2.13.0",
     "node-fs-extra": "^0.8.1",
     "node-uuid": "^1.4.7",
     "q": "^1.4.1",
+    "request": "^2.72.0",
     "underscore": "^1.8.3",
     "yargs": "git://github.com/yargs/yargs.git#365fb9a"
   },

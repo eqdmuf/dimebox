@@ -13,9 +13,9 @@ _dimebox()
   fi
 
   # Find which subcommand, if any
-  for(( i=COMP_CWORD-1; i>=0; i-- )); do
-    echo "${COMP_WORDS[i]}" | grep -q "\(generate\|summary\|init\|submit\|parse\|watch\|rm\|resolve\|completion\)" || continue
-    comm="${COMP_WORDS[i]}"
+  for i in "${COMP_WORDS[@]}"; do
+    echo "$i" | grep -q "\(generate\|summary\|init\|submit\|parse\|watch\|rm\|resolve\|completion\)" || continue
+    comm="$i"
     break
   done
 

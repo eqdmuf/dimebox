@@ -22,16 +22,16 @@ _dimebox()
 
     case "$comm" in
       generate)
-        COMPREPLY=( $(compgen -W '-m --machine --vc' -- "${cur_word}") )
+        COMPREPLY=( $(compgen -W '-m --machine --vc --no-vc' -- "${cur_word}") )
         ;;
       summary)
-        COMPREPLY=( $(compgen -W '--expfile --sample --vc' -- "${cur_word}") )
+        COMPREPLY=( $(compgen -W '--expfile --sample --vc --no-expfile --no-sample --no-vc' -- "${cur_word}") )
         ;;
       submit)
-        COMPREPLY=( $(compgen -W '--batch --dry-run -m --machine --sample --stagger --vc' -- "${cur_word}") )
+        COMPREPLY=( $(compgen -W '--batch --dry-run -m --machine --stagger --vc --no-dry-run --no-stagger --no-vc' -- "${cur_word}") )
         ;;
       parse)
-        COMPREPLY=( $(compgen -W '-p --parser -t --tag --agg' -- "${cur_word}") )
+        COMPREPLY=( $(compgen -W '-p --parser -t --tag --agg --no-agg' -- "${cur_word}") )
         ;;
       watch)
         COMPREPLY=( $(compgen -W '--interval' -- "${cur_word}") )
